@@ -327,3 +327,34 @@ the given point.*/
 
 Box2D (geomA) /*Returns a BOX2D representing the maximum
 extents of the geometry.*/
+
+
+
+
+
+
+
+
+
+SELECT 
+    st_area(w.geometry) as watershed_area_sf, 
+    st_area(b.geometry) as basin_area_sf,
+    st_area(w.geometry)*0.11111111111111111 as watershed_area_sy, 
+    st_area(b.geometry)*0.11111111111111111 as basin_area_sy,
+    st_area(w.geometry)/43560 as watershed_area_ac, 
+    st_area(b.geometry)/43560 as basin_area_ac
+from 
+    public.watershed_sarasota as w
+left join 
+    public.basin_network_sarasota as b
+on  
+    w.objectid = b.objectid
+where 
+    St_intersects(b.geometry,w.geometry);
+
+SELECT *
+from public.watershed_sarasota as w
+right outer join public.basin_network_sarasota as b
+on  St_intersects(b.geometry,w.geometry)
+where St_intersects(b.geometry,w.geometry)
+
