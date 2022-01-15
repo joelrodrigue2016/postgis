@@ -1,0 +1,17 @@
+(geospatial) C:\Users\joel>env list
+
+(geospatial) C:\Users\joel>conda env list
+
+
+(geospatial) C:\Users\joel>conda create --name geospatial
+
+
+
+(geospatial) C:\Users\joel>conda activate geospatial
+
+(geospatial) C:\Users\joel>conda install -c conda-forge python=3.9 fiona shapely rasterio pyproj pandas jupyterlab geopandas
+
+
+
+
+
