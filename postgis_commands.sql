@@ -358,3 +358,7 @@ right outer join public.basin_network_sarasota as b
 on  St_intersects(b.geometry,w.geometry)
 where St_intersects(b.geometry,w.geometry)
 
+SELECT st_intersection(zc.geom,ST_GeomFromWKB(h.wkb_geometry)),h.*
+--into sample1
+   FROM "ZipCode" as zc , hydrants as h
+   WHERE zc.zip_code='34232';
