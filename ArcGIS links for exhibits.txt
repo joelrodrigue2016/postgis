@@ -1,0 +1,30 @@
+
+
+https://hazards.fema.gov/gis/nfhl/services
+
+
+FL83-WF
+
+
+
+
+M:\CADD\Autodesk\2022\Library\Borders
+
+
+<dyn type="date" format="month"/>       date and year
+
+
+
+
+K:\SAR_GIS\                  data for gis
+
+
+
+jscript code for multiple labels
+
+[Pond_Nodes.Name] + "\n" +"CWL: "+ [Sheet1$.CWL] + "\n" + "100Yr: "+[Sheet1$.100_YR_STAGE]
+
+
+
+
+\\tamfp01\GIS_Data
